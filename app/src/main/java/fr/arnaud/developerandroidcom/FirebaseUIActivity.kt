@@ -10,6 +10,8 @@ import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_firebase_ui.*
+import kotlinx.android.synthetic.main.activity_firebase_ui.buttonSwap
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Demonstrate authentication using the FirebaseUI-Android library. This activity demonstrates
@@ -70,6 +72,7 @@ class FirebaseUIActivity : AppCompatActivity(), View.OnClickListener {
             status.text = getString(R.string.firebaseui_status_fmt, user.email)
             detail.text = getString(R.string.id_fmt, user.uid)
 
+            buttonSwap.visibility = View.VISIBLE
             signInButton.visibility = View.GONE
             signOutButton.visibility = View.VISIBLE
         } else {
@@ -77,6 +80,7 @@ class FirebaseUIActivity : AppCompatActivity(), View.OnClickListener {
             status.setText(R.string.signed_out)
             detail.text = null
 
+            buttonSwap.visibility = View.GONE
             signInButton.visibility = View.VISIBLE
             signOutButton.visibility = View.GONE
         }

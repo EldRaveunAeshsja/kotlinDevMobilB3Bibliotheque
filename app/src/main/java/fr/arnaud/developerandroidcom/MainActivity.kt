@@ -26,31 +26,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         println("hello " + db);
 
-        /*
-
-        // Create a new user with a first and last name
-        val user = hashMapOf(
-            "first" to "Ada",
-            "last" to "Lovelace",
-            "born" to 1815
-        )
-
-        // Add a new document with a generated ID
-        println("--------------------- ADD DATA START")
-        db.collection("users")
-            .add(user)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                println("--------------------- ADD DATA END")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-                println("--------------------- ADD DATA END")
-            }
-
-
-         */
-
         println("--------------------- GET DATA START")
 
         var i = 1
