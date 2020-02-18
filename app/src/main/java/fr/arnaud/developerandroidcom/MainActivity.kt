@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         println("hello " + db);
 
-        println("--------------------- GET DATA START")
+        /*         println("--------------------- GET DATA START")
 
         var i = 1
         db.collection("users")
@@ -43,18 +43,7 @@ class MainActivity : AppCompatActivity() {
                 Log.w(TAG, "Error getting documents.", exception)
                 println("--------------------- GET DATA END")
             }
-    }
 
-        /** Called when the user tape the Send button */
-        fun sendMessage(view: View) {
-            // Do something in response to button
-
-            val editText = findViewById<EditText>(R.id.editText)
-            val message = editText.text.toString()
-            val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
-        startActivity(intent)
-
+         */
     }
 }

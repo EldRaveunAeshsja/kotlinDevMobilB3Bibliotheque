@@ -1,5 +1,7 @@
 package fr.arnaud.developerandroidcom
 
+
+import android.widget.EditText
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -96,6 +98,13 @@ class FirebaseUIActivity : AppCompatActivity(), View.OnClickListener {
             R.id.signInButton -> startSignIn()
             R.id.signOutButton -> signOut()
         }
+    }
+
+    /** Called when the user taps the Send button */
+    fun sendMessage(view: View) {
+        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+        }
+        startActivity(intent)
     }
 
     companion object {
